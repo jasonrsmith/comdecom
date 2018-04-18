@@ -18,9 +18,6 @@ func ScanNumber(s string) (int, int) {
 		length int
 		v      rune
 	)
-	runes := []rune(s)
-	for i := 0; i < len(runes); i++ {
-	}
 	for i, v = range s {
 		if !IsNumber(rune(v)) {
 			break

@@ -63,7 +63,7 @@ func TestMoreComplex(t *testing.T) {
 		compressed string
 		expected   string
 	}{
-		//{"ab3[abc5[xyz]]", "ababcxyzxyzxyzxyzxyzabcxyzxyzxyzxyzxyzabcxyzxyzxyzxyzxyz"},
+		{"ab3[abc5[xyz]]", "ababcxyzxyzxyzxyzxyzabcxyzxyzxyzxyzxyzabcxyzxyzxyzxyzxyz"},
 		{"19", ""},
 		{"a19", "a"},
 		{"19a", "a"},
