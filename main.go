@@ -45,12 +45,8 @@ func decompressHelp(compressed string) (string, int) {
 
 	compressedRuneList := []rune(compressed)
 	inBrackets := false
-	var lastV rune
 	for i < len(compressedRuneList) {
 		v := compressedRuneList[i]
-		if v == lastV {
-			panic("")
-		}
 		if IsNumber(v) {
 			var length int
 			numberToRepeat, length = ScanNumber(compressed[i:])
@@ -73,7 +69,6 @@ func decompressHelp(compressed string) (string, int) {
 			buf.WriteRune(v)
 			i++
 		}
-		lastV = v
 	}
 
 	return buf.String(), i
